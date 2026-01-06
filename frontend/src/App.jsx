@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+import Lenis from 'lenis'
 import './App.css'
-
+import Hero from './components/Hero/Hero'
+import About from './components/About/About'
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 2.5, // Increased duration for smoother glide
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Keeping this smooth easing
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    })
+
+    // Animation frame loop
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    // Cleanup
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Hero />
+      <About />
+    </div>
+
   )
 }
 
