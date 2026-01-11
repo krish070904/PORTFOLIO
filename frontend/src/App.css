@@ -1,0 +1,33 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Letter animation styles */
+.letter {
+    display: inline-block;
+    will-change: transform, opacity;
+}
+
+/* Panel styles for horizontal scroll */
+.panel {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure smooth transitions */
+.panel * {
+    will-change: transform;
+}
