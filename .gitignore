@@ -55,3 +55,6 @@ coverage/
 
 *.zip
 *.tar.gz
+
+# Large files
+cloudflared.exe
