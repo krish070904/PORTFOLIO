@@ -67,6 +67,7 @@ const RightPanelContent = () => {
                         type="text"
                         id="name"
                         name="name"
+                        autoComplete="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="your-name"
@@ -80,6 +81,7 @@ const RightPanelContent = () => {
                         type="email"
                         id="email"
                         name="email"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="your-email@domain.com"
@@ -92,6 +94,7 @@ const RightPanelContent = () => {
                     <textarea
                         id="message"
                         name="message"
+                        autoComplete="off"
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell me about your project..."
