@@ -18,8 +18,10 @@ const RightPanelContent = () => {
 
     const [loading, setLoading] = useState(false);
 
-    // Backend API URL (default to local if not set)
-    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000/api/contact';
+    // Backend API URL (priority: Env Var > Production URL > Localhost)
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://portfolio-u8g6.onrender.com/api/contact';
+
+    console.log('Sending request to:', BACKEND_URL); // Log for debugging
 
     const handleSubmit = async (e) => {
         e.preventDefault();
