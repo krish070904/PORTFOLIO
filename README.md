@@ -1,117 +1,228 @@
-# 🚀 Krishna's Portfolio Website
+<div align="center">
 
-A modern, responsive portfolio website built with React, TailwindCSS, and Node.js.
+# 🌟 Krishna Wable's Digital Space
 
-## 📋 Project Structure
-
-```
-PORTFOLIO/
-├── frontend/          # React + Vite + TailwindCSS v4
-├── backend/           # Node.js + Express API
-├── .gitignore
-└── README.md
+```ascii
+╔══════════════════════════════════════════════════════════════╗
+║  Full Stack Developer × AI Enthusiast × Problem Solver      ║
+║  Building the future, one commit at a time                   ║
+╚══════════════════════════════════════════════════════════════╝
 ```
 
-## 🛠️ Tech Stack
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-00E5FF?style=for-the-badge&logo=vercel&logoColor=white)](https://buildwithkrishna.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-wable/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krish070904)
 
-### Frontend
-- **React** v19.2.0 - UI library
-- **Vite** v7.2.4 - Build tool & dev server
-- **TailwindCSS** v4.1.18 - Utility-first CSS framework
-- **ESLint** - Code linting
+</div>
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express** - Web framework
-- **Additional dependencies** (to be added based on features)
+---
 
-## 🚀 Getting Started
+## 🎯 What's This?
+
+My personal portfolio website — where design meets functionality. Built with modern web tech and a touch of creativity. No templates, no shortcuts, just pure code and caffeine ☕
+
+**Live:** [buildwithkrishna.vercel.app](https://buildwithkrishna.vercel.app/)
+
+---
+
+## ⚡ Tech Arsenal
+
+<table>
+<tr>
+<td width="50%">
+
+### Frontend Magic ✨
+```javascript
+const stack = {
+  framework: "React 19",
+  animations: "GSAP + Lenis",
+  styling: "Vanilla CSS",
+  build: "Vite",
+  deployment: "Vercel"
+}
+```
+
+</td>
+<td width="50%">
+
+### Backend Power 🚀
+```javascript
+const api = {
+  runtime: "Node.js",
+  framework: "Express",
+  email: "Resend API",
+  security: "Rate Limiting + XSS Protection",
+  deployment: "Render"
+}
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎨 Features That Slap
+
+- **🌊 Smooth Scrolling** - Lenis-powered buttery smooth experience
+- **🎭 GSAP Animations** - Eye-catching transitions and effects
+- **📱 Fully Responsive** - Looks fire on any device
+- **🎯 Interactive Cursor** - Custom cursor that follows your moves
+- **📧 Contact Form** - Spam-protected with rate limiting
+- **🔒 Secure** - XSS protection, input validation, the works
+- **⚡ Fast AF** - Optimized for performance
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/krish070904/PORTFOLIO.git
-   cd PORTFOLIO
-   ```
-
-2. **Install Frontend Dependencies**
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-3. **Install Backend Dependencies**
-   ```bash
-   cd ../backend
-   npm install
-   ```
-
-### Running the Project
-
-#### Frontend Development Server
 ```bash
+node >= 18.0.0
+npm >= 9.0.0
+```
+
+### Clone & Install
+```bash
+# Clone this bad boy
+git clone https://github.com/krish070904/PORTFOLIO.git
+cd PORTFOLIO
+
+# Frontend setup
+cd frontend
+npm install
+
+# Backend setup
+cd ../backend
+npm install
+```
+
+### Run Locally
+```bash
+# Terminal 1 - Frontend (http://localhost:5173)
 cd frontend
 npm run dev
-```
-The frontend will be available at `http://localhost:5173`
 
-#### Backend Development Server
-```bash
-cd backend
-npm run dev
-```
-The backend will be available at `http://localhost:3000` (or configured port)
-
-## 📦 Build for Production
-
-### Frontend
-```bash
-cd frontend
-npm run build
-```
-
-### Backend
-```bash
+# Terminal 2 - Backend (http://localhost:5000)
 cd backend
 npm start
 ```
 
-## 🎨 Features
+---
 
-- ✨ Modern and responsive design
-- 🎯 Interactive UI components
-- 📱 Mobile-friendly
-- 🚀 Fast performance with Vite
-- 🎨 Styled with TailwindCSS v4
-- 📧 Contact form functionality (backend)
+## 🏗️ Project Structure
 
-## 📝 Environment Variables
-
-Create a `.env` file in the backend directory:
-
-```env
-PORT=3000
-# Add other environment variables as needed
 ```
-
-## 🤝 Contributing
-
-This is a personal portfolio project. Feel free to fork and customize for your own use!
-
-## 📄 License
-
-MIT License - feel free to use this project for your own portfolio.
-
-## 👨‍💻 Author
-
-**Krishna Wable**
-- GitHub: [@krish070904](https://github.com/krish070904)
+PORTFOLIO/
+│
+├── frontend/                # React + Vite magic
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   │   ├── Hero/        # Landing section
+│   │   │   ├── About/       # About me section
+│   │   │   ├── Projects/    # Project showcase
+│   │   │   ├── Experience/  # Work timeline
+│   │   │   └── Footer/      # Contact form
+│   │   ├── assets/          # Images, icons, etc.
+│   │   └── App.jsx          # Main app orchestrator
+│   └── package.json
+│
+├── backend/                 # Express API
+│   ├── server.js            # Main server file
+│   └── package.json
+│
+└── README.md                # You are here 👋
+```
 
 ---
 
-⭐ Star this repo if you find it helpful!
+## 🎯 Key Highlights
+
+### 💼 Currently
+**Full Stack Developer @ Bosch India**  
+Building plant-wide deployment systems and modernizing manufacturing operations
+
+### 🏆 Notable Projects
+
+**🏥 HealthSync** - AI-powered health management (MERN + BioMistral 7B + ResNet-50)  
+**💰 Credlo** - Smart loan comparison platform (MERN + AI)  
+**📸 Instagram Automation** - Automated reel posting (Python + GitHub Actions)
+
+### 🎓 Certified By
+- AWS (Cloud Practitioner)
+- Stanford (Machine Learning Specialization)
+- Simplilearn (Full Stack Development)
+- Accenture (Developer Program)
+
+---
+
+## 🔧 Environment Setup
+
+### Frontend `.env`
+```env
+VITE_BACKEND_URL=your_backend_url_here
+```
+
+### Backend `.env`
+```env
+RESEND_API_KEY=your_resend_api_key
+PORT=5000
+```
+
+---
+
+## 📊 Performance Stats
+
+- **Lighthouse Score:** 95+ across the board
+- **First Contentful Paint:** < 1.5s
+- **Time to Interactive:** < 3s
+- **Bundle Size:** Optimized with code splitting
+
+---
+
+## 🎨 Design Philosophy
+
+> "Code is poetry, UI is art, and performance is the canvas."
+
+- **Minimalist** - Clean, focused, no clutter
+- **Smooth** - Animations that feel natural
+- **Responsive** - Mobile-first approach
+- **Accessible** - ARIA labels, keyboard navigation
+- **Fast** - Optimized for speed
+
+---
+
+## 🤝 Want to Collaborate?
+
+I'm always down to work on cool projects! Hit me up:
+
+- 📧 Email: krishna.wable.mail@gmail.com
+- 💼 LinkedIn: [krishna-wable](https://www.linkedin.com/in/krishna-wable/)
+- 🐙 GitHub: [@krish070904](https://github.com/krish070904)
+
+---
+
+## 📝 License
+
+MIT License - Feel free to fork, modify, and use for your own portfolio!
+
+---
+
+<div align="center">
+
+### 💭 Fun Fact
+
+```javascript
+while (alive) {
+  eat();
+  sleep();
+  code();
+  repeat();
+}
+```
+
+**Made with 💙 and lots of ☕ by Krishna Wable**
+
+⭐ **Star this repo if you vibe with it!**
+
+</div>

@@ -14,7 +14,6 @@ const ExperienceTitle = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Weird random movement for Head
       gsap.to(headRef.current, {
         x: () => Math.random() * 400 - 200,
         y: () => Math.random() * 300 - 150,
@@ -25,12 +24,11 @@ const ExperienceTitle = () => {
           start: "left right",
           end: "right left",
           scrub: 1.5,
-          containerAnimation: document.querySelector('.section[data-color="#0c77a8ff"] .flex') // Trying to hook into parent scroll if possible, otherwise falls back
+          containerAnimation: document.querySelector('.section[data-color="#0c77a8ff"] .flex')
         },
         ease: "elastic.out(1, 0.3)"
       })
 
-      // Different weird random movement for Exp
       gsap.to(expRef.current, {
         x: () => Math.random() * -400 + 200,
         y: () => Math.random() * -300 + 150,

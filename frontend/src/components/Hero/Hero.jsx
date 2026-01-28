@@ -25,7 +25,7 @@ const Hero = () => {
                     trigger: containerRef.current,
                     start: 'top top',
                     end: 'bottom top',
-                    scrub: 1, // Reduced from 4 for better mobile performance
+                    scrub: 1,
                 }
             })
 

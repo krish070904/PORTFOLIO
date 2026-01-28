@@ -15,32 +15,43 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const ANIMATION_CONFIG = {
+  colorTransition: { duration: 0.35, ease: "power1.out" },
+  scrollTrigger: {
+    colorStart: "top 75%",
+    colorEnd: "bottom 25%",
+    panelStart: "left 65%",
+    panelEnd: "right 65%"
+  },
+  parallax: { distance: -600, scrub: 2.5 },
+  snap: { min: 0.2, max: 0.5, ease: "power2.out" }
+};
+
 const App = () => {
-  const horizontalRef = useRef(null)
-  const experienceRef = useRef(null)
-  const mainRef = useRef(null)
+  const horizontalRef = useRef(null);
+  const experienceRef = useRef(null);
+  const mainRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const sections = document.querySelectorAll('.section')
+      const sections = document.querySelectorAll('.section');
 
       sections.forEach((section) => {
-        const color = section.getAttribute('data-color')
-        if (section.classList.contains('panel')) return
+        const color = section.getAttribute('data-color');
+        if (section.classList.contains('panel')) return;
 
         ScrollTrigger.create({
           trigger: section,
-          start: "top 75%",
-          end: "bottom 25%",
-          onEnter: () => gsap.to(mainRef.current, { backgroundColor: color, duration: 0.35, ease: "power1.out", overwrite: 'auto' }),
-          onEnterBack: () => gsap.to(mainRef.current, { backgroundColor: color, duration: 0.35, ease: "power1.out", overwrite: 'auto' }),
-        })
-      })
+          start: ANIMATION_CONFIG.scrollTrigger.colorStart,
+          end: ANIMATION_CONFIG.scrollTrigger.colorEnd,
+          onEnter: () => gsap.to(mainRef.current, { backgroundColor: color, ...ANIMATION_CONFIG.colorTransition, overwrite: 'auto' }),
+          onEnterBack: () => gsap.to(mainRef.current, { backgroundColor: color, ...ANIMATION_CONFIG.colorTransition, overwrite: 'auto' }),
+        });
+      });
 
-      ScrollTrigger.refresh()
+      ScrollTrigger.refresh();
 
-      // Combine into one master horizontal section
-      const horizontalSections = [horizontalRef, experienceRef]
+      const horizontalSections = [horizontalRef, experienceRef];
 
       horizontalSections.forEach((sectionRef) => {
         if (sectionRef.current) {
@@ -96,7 +107,6 @@ const App = () => {
               }
             })
 
-            // About Image Animation Logic - Updated to check inside the master section
             if (sectionRef === horizontalRef) {
               const aiWrapper = sectionRef.current.querySelector('.about-img-ai-wrapper')
               const fsWrapper = sectionRef.current.querySelector('.about-img-fs-wrapper')
@@ -135,7 +145,6 @@ const App = () => {
             }
 
 
-            // Projects Icons Animation Logic
             const reactIcon = sectionRef.current.querySelector('.project-icon-react');
             const nodeIcon = sectionRef.current.querySelector('.project-icon-node');
             const mongoIcon = sectionRef.current.querySelector('.project-icon-mongo');
@@ -144,9 +153,7 @@ const App = () => {
             if (reactIcon) {
               const parentPanel = reactIcon.closest('.panel');
 
-              // SHOCKING CHAOS ENTRANCES
 
-              // React: VORTEX SPIN from Top-Left
               gsap.fromTo(reactIcon,
                 { x: -800, y: -400, rotation: -1440, scale: 5, opacity: 0 },
                 {
@@ -166,7 +173,7 @@ const App = () => {
                 }
               );
 
-              // Node: METEOR DROP from Sky
+
               gsap.from(nodeIcon, {
                 y: -1200,
                 x: 200,
@@ -182,7 +189,7 @@ const App = () => {
                 }
               });
 
-              // Python: Smooth Spin Entry from Right
+
               gsap.from(pythonIcon, {
                 x: 400,
                 rotation: -360,
@@ -198,7 +205,7 @@ const App = () => {
                 }
               });
 
-              // Mongo: IMPLOSION POP
+
               gsap.from(mongoIcon, {
                 scale: 0,
                 rotation: 1080,

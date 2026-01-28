@@ -17,11 +17,7 @@ const RightPanelContent = () => {
     };
 
     const [loading, setLoading] = useState(false);
-
-    // Backend API URL (priority: Env Var > Production URL > Localhost)
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://portfolio-u8g6.onrender.com/api/contact';
-
-    console.log('Sending request to:', BACKEND_URL); // Log for debugging
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,14 +26,12 @@ const RightPanelContent = () => {
         try {
             const response = await fetch(BACKEND_URL, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
                     message: formData.message,
-                    subject: 'Portfolio Contact Form' // Default subject
+                    subject: 'Portfolio Contact Form'
                 }),
             });
 
@@ -47,13 +41,11 @@ const RightPanelContent = () => {
                 alert('Message sent successfully! I will get back to you soon.');
                 setFormData({ name: '', email: '', message: '' });
             } else {
-                // Try to extract the specific error message from the backend response
-                const errorMessage = data.error?.message || data.message || 'Failed to send message';
+                const errorMessage = data.error || data.message || 'Failed to send message';
                 throw new Error(errorMessage);
             }
         } catch (error) {
-            console.error('Submission Error:', error);
-            alert(`Error: ${error.message}\n\nAttempted URL: ${BACKEND_URL}\n\n(If it shows localhost, your Vercel redeploy didn't pick up the environment variable)`);
+            alert(error.message || 'Unable to send message. Please try again later.');
         } finally {
             setLoading(false);
         }
