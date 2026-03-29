@@ -3,6 +3,7 @@ import '../../App.css'
 import './Experience.css'
 import SamsaraLogo from '../../assets/Experience logo/Samsara.png'
 import Swifty9Logo from '../../assets/Experience logo/Swifty9.png'
+import BoschLogo from '../../assets/Experience logo/Bosch.png'
 
 /* --- CONSTANTS & CONFIGURATION --- */
 const EXPERIENCE_DATA = [
@@ -34,7 +35,7 @@ const EXPERIENCE_DATA = [
         id: "3",
         year: "2026",
         date: "Jan 2026 - Jun 2026",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/2560px-Bosch-logo.svg.png",
+        image: BoschLogo,
         role: "Full Stack Developer",
         desc: "Architecting a comprehensive, plant-wide deployment system to modernize manufacturing operations. Leading the migration from legacy infrastructure to a cutting-edge, scalable full-stack ecosystem.",
         emergeDir: "top",
