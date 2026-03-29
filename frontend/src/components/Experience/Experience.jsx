@@ -7,7 +7,18 @@ import BoschLogo from '../../assets/Experience logo/Bosch.png'
 
 /* --- CONSTANTS & CONFIGURATION --- */
 const EXPERIENCE_DATA = [
-   
+    {
+        id: "1",
+        year: "2025",
+        date: "Jun 2025 - Oct 2025",
+        image: SamsaraLogo,
+        role: "AI Intern",
+        desc: "Spearheaded the fine-tuning of Large Language Models (LLMs) to enhance domain-specific accuracy. Engineered robust backend architecture for an automated WhatsApp conversational agent, optimizing response latency and scalability.",
+        emergeDir: "top",
+        position: "md:bottom-16 md:left-12",
+        origin: "origin-bottom-left",
+        activeOnYear: "2023"
+    },
     {
         id: "2",
         year: "2025",
