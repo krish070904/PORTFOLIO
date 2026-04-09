@@ -6,6 +6,7 @@ import healthSyncImg from '../../assets/Healthsync/healthsync.png';
 import credloImg from '../../assets/Credlo/credlo.avif';
 import instaImg from '../../assets/instagram automation/insta.png';
 import keImg from '../../assets/krishnaEnterprises/ke.png';
+import shopfloorImg from '../../assets/Shopfloor/shopfloor.png';
 
 const ProjectCarousel = () => {
     const stackRef = useRef(null);
@@ -54,6 +55,16 @@ const ProjectCarousel = () => {
         },
         {
             id: 4,
+            title: "Digital Shopfloor Records",
+            desc: "Full-stack enterprise application using Django & Next.js with 28+ RESTful APIs and role-based access control (RBAC) across three user levels. Reduced paper costs by ~₹16,000 per department annually.",
+            tech: ["Django", "Next.js", "REST APIs"],
+            icon: <img src={shopfloorImg} alt="Shopfloor" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />,
+            color: "#e87722",
+            live: "https://www.linkedin.com/feed/update/urn:li:activity:7447301589742047232/?originTrackingId=pP2skc0zmK9IHrjbXMZDOA%3D%3D",
+            github: null
+        },
+        {
+            id: 5,
             title: "Krishna Enterprises",
             desc: "Client website establishing global internet recognition and successfully facilitating international commercial orders from Malaysia.",
             tech: ["HTML", "CSS", "JS"],
@@ -384,15 +395,17 @@ const TiltCard = ({ project, isActive }) => {
                 </div>
 
                 <div className="card-footer">
-                    <button
-                        className="btn-icon"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            window.open(project.github, '_blank');
-                        }}
-                    >
-                        <Github size={20} />
-                    </button>
+                    {project.github && (
+                        <button
+                            className="btn-icon"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                window.open(project.github, '_blank');
+                            }}
+                        >
+                            <Github size={20} />
+                        </button>
+                    )}
                     {project.live && (
                         <button
                             className="btn-primary"
