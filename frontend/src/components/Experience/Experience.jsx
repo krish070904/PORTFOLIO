@@ -20,7 +20,7 @@ const EXPERIENCE_DATA = [
         activeOnYear: "2023"
     },
      {
-        id: "3",
+        id: "2",
         year: "2026",
         date: "Jan 2026 - Ongoing",
         image: BoschLogo,
