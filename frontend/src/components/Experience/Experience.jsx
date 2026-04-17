@@ -10,7 +10,7 @@ const EXPERIENCE_DATA = [
     {
         id: "1",
         year: "2025",
-        date: "Jun 2025 - Oct 2025",
+        date: "Jun 2025 - Dec 2025",
         image: SamsaraLogo,
         role: "AI Intern",
         desc: "Spearheaded the fine-tuning of Large Language Models (LLMs) to enhance domain-specific accuracy. Engineered robust backend architecture for an automated WhatsApp conversational agent, optimizing response latency and scalability.",
@@ -19,22 +19,10 @@ const EXPERIENCE_DATA = [
         origin: "origin-bottom-left",
         activeOnYear: "2023"
     },
-    {
-        id: "2",
-        year: "2025",
-        date: "Nov 2025 - Dec 2025",
-        image: Swifty9Logo,
-        role: "UI/UX Designer",
-        desc: "Crafted intuitive, high-fidelity user interfaces for cross-platform web and mobile applications. Implemented human-centered design principles to elevate user engagement and streamline complex user journeys.",
-        emergeDir: "bottom",
-        position: "md:top-8 md:left-1/2 md:-translate-x-1/2",
-        origin: "origin-top",
-        activeOnYear: "2024"
-    },
-    {
+     {
         id: "3",
         year: "2026",
-        date: "Jan 2026 - Jun 2026",
+        date: "Jan 2026 - Ongoing",
         image: BoschLogo,
         role: "Full Stack Developer",
         desc: "Architecting a comprehensive, plant-wide deployment system to modernize manufacturing operations. Leading the migration from legacy infrastructure to a cutting-edge, scalable full-stack ecosystem.",
